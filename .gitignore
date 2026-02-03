@@ -9,3 +9,4 @@ venv/
 .DS_Store
 printer_output/
 test_api.db
+test_label_diff*.png
