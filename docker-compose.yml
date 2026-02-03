@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   db:
-    image: postgres:15-alpine
+    image: public.ecr.aws/docker/library/postgres:15-alpine
     restart: always
     environment:
       POSTGRES_USER: jaruser

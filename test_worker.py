@@ -26,6 +26,9 @@ backend.src.worker.queue_manager.SessionLocal = TestingSessionLocal
 
 def test_worker_flow():
     try:
+        # Ensure printer output directory exists (in case other tests deleted it)
+        os.makedirs("printer_output", exist_ok=True)
+
         # Create tables
         Base.metadata.create_all(bind=engine)
 
